@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
   <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
   <meta name="theme-color" content="#FFE1C4">
 </head>
+
 <body class="grey lighten-4">
 
   <!-- top nav -->
@@ -32,45 +34,17 @@
     <li><a class="subheader">FOODNINJA</a></li>
     <li><a href="/" class="waves-effect">Home</a></li>
     <li><a href="/pages/about.html" class="waves-effect">About</a></li>
-    <li><div class="divider"></div></li>
+    <li>
+      <div class="divider"></div>
+    </li>
     <li><a href="/pages/contact.html" class="waves-effect">
-      <i class="material-icons">mail_outline</i>Contact</a>
+        <i class="material-icons">mail_outline</i>Contact</a>
     </li>
   </ul>
 
   <!-- recipes -->
   <div class="recipes container grey-text text-darken-1">
-    <h6 class="center">Ninja Recipes</h6>
-    <div class="card-panel recipe white row">
-      <img src="/img/dish.png" alt="recipe thumb">
-      <div class="recipe-details">
-        <div class="recipe-title">Edame Noodles</div>
-        <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
-      </div>
-      <div class="recipe-delete">
-        <i class="material-icons">delete_outline</i>
-      </div>
-    </div>
-    <div class="card-panel recipe white row">
-      <img src="/img/dish.png" alt="recipe thumb">
-      <div class="recipe-details">
-        <div class="recipe-title">Edame Noodles</div>
-        <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
-      </div>
-      <div class="recipe-delete">
-        <i class="material-icons">delete_outline</i>
-      </div>
-    </div>
-    <div class="card-panel recipe white row">
-      <img src="/img/dish.png" alt="recipe thumb">
-      <div class="recipe-details">
-        <div class="recipe-title">Edame Noodles</div>
-        <div class="recipe-ingredients">Edame Beans, Noodels, Garlic oil</div>
-      </div>
-      <div class="recipe-delete">
-        <i class="material-icons">delete_outline</i>
-      </div>
-    </div>
+    <h6 class="center">Ninja Recipes woohoo</h6>
     <div class="card-panel recipe white row">
       <img src="/img/dish.png" alt="recipe thumb">
       <div class="recipe-details">
@@ -82,6 +56,7 @@
       </div>
     </div>
   </div>
+
 
   <div class="center">
     <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
@@ -92,7 +67,7 @@
   <!-- add recipe side nav -->
   <div id="side-form" class="sidenav side-form">
     <form class="add-recipe container section">
-      <h6 >New Recipe</h6>
+      <h6>New Recipe</h6>
       <div class="divider"></div>
       <div class="input-field">
         <input placeholder="e.g. Ninja soup" id="title" type="text" class="validate">
@@ -108,7 +83,31 @@
     </form>
   </div>
 
-<script src="/js/app.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAnv5GXNU9YRXRYeSE20U9J-0yptsUG7b0",
+      authDomain: "food-ninja-pwa-30564.firebaseapp.com",
+      databaseURL: "https://food-ninja-pwa-30564.firebaseio.com",
+      projectId: "food-ninja-pwa-30564",
+      storageBucket: "food-ninja-pwa-30564.appspot.com",
+      messagingSenderId: "429995494242",
+      appId: "1:429995494242:web:3b0dcfaf0286fb79f4fa3b",
+      measurementId: "G-DMFCP2LVPB"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+
+  <script src="/js/app.js"></script>
+  <script src="/js/db.js"></script>
   <script src="/js/ui.js"></script>
 </body>
+
 </html>

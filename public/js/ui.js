@@ -26,3 +26,9 @@ const html = `
 `;
 recipes.innerHTML += html;
 };
+
+//remove recipe from DOM
+const removeRecipe = (id) =>{
+  const recipe = document.querySelector(`.recipe[data-id=${id}]`);
+  recipe.remove();
+};
